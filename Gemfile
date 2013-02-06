@@ -1,0 +1,11 @@
+source 'http://rubygems.org'
+
+gem 'tweetstream', '2.4.0'
+gem 'json'
+gem 'activerecord'
+gem 'pg'
+gem 'omniauth'
+gem 'omniauth-twitter'
+gem 'sinatra'
+gem 'sinatra-contrib'
+gem 'workflow'

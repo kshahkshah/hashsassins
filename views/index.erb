@@ -1,0 +1,13 @@
+<% if current_user %>
+  <h2>welcome back agent <%= current_user.nickname %></h2>
+
+  To start a new game message @hashsassins 'cry havoc' with a hashtag to track your game.
+
+  <% current_user.games.order('updated_at desc, created_at desc').each do |game| %>
+  <h3><a href="/games/<%= game.id %>"><%= game.hashtag %></a></h3>
+  <% end %>
+  
+
+<% else %>
+  <a href='/auth/twitter'>To create a new game, sign in with Twitter</a>
+<% end %>
